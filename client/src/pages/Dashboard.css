@@ -1,0 +1,273 @@
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stat-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.stat-card-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-card-horizontal .stat-card-icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.stat-card-label {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin-bottom: 0.25rem;
+}
+
+.stat-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.stat-card-sub {
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-top: 0.25rem;
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+/* Quick Stats */
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.quick-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quick-stat-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.quick-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.quick-stat-label {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+/* Charts */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-card {
+  height: 100%;
+}
+
+.chart-container {
+  height: 300px;
+}
+
+.chart-container-small {
+  height: 250px;
+}
+
+/* Recent Activity */
+.recent-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.arrival-icon {
+  background-color: #dcfce7;
+  color: #22c55e;
+}
+
+.sale-icon {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--dark);
+}
+
+.activity-subtitle {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.activity-meta {
+  text-align: right;
+}
+
+.activity-amount {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+
+/* Alerts */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fef2f2;
+  border-radius: 0.5rem;
+  border-left: 3px solid #ef4444;
+}
+
+.alert-icon {
+  color: #ef4444;
+}
+
+.alert-name {
+  font-weight: 500;
+  flex: 1;
+}
+
+.alert-qty {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid,
+  .stats-grid-2,
+  .recent-activity-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .quick-stat-item {
+    width: calc(50% - 0.75rem);
+  }
+}
